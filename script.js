@@ -36,6 +36,8 @@ function addBookToLibrary() {
   displayBook();
 }
 
+function deleteBook() {}
+
 /* addBookToLibrary("The Hobbit", "by J.R.R Tolkien", 295, false);
 addBookToLibrary(
   "The Priory of the Orange Tree",
