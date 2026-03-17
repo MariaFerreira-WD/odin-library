@@ -1,4 +1,7 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
+  this.id = crypto.randomUUID();
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -10,16 +13,9 @@ function Book(title, author, pages, read) {
   };
 }
 
-const theHobbit = new Book(
-  "The Hobbit",
-  "by J.R.R Tolkien",
-  "295 pages",
-  "not read yet",
-);
-theHobbit.info();
-
-function show() {
-  "use strict";
-  console.log(this === undefined);
+function addBookToLibrary(title, author, pages, read) {
+  const book = new Book(title, author, pages, read);
+  myLibrary.push(book);
 }
-show();
+
+addBookToLibrary("The Hobbit", "by J.R.R Tolkien", 295, false);
